@@ -6,7 +6,15 @@
       <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
       <!-- <app-game-control></app-game-control> -->
     </div>
-    
-    <hr>
   </div>
+</div>
+
+<p *appUnless="true">Green text</p>
+<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Blue text</p>
+
+<div [ngSwitch]= "value">
+  <p *ngSwitchCase="5">Value is 5</p>
+  <p *ngSwitchCase="10">Value is 10</p>
+  <p *ngSwitchCase="100">Value is 100</p>
+  <p *ngSwitchDefault>Value is Default</p>
 </div>
